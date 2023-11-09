@@ -19,18 +19,23 @@ var __smartfilename = path.basename(__filename);
 app
 .get('/', function(req, res) {
 	logger.info(__smartfilename, __line, 'Welcome to (' + (req.headers ? req.headers['x-forwarded-for'] : '?') + " - " + (req.connection ? req.connection.remoteAddress : '?') + " - " + (req.socket ? req.socket.remoteAddress : '?') + " - " + (req.connection && req.connection.socket ? req.connection.socket.remoteAddress : '?') + ')');
+	//TODO(vrabbi) add rate limiting
 	res.sendfile(__dirname + '/templates/index.html');
 })
 .get('/favicon.ico', function(req, res) {
+	//TODO(vrabbi) add rate limiting
 	res.sendfile(__dirname + '/static/favicon.ico');
 })
 .get('/img/user.svg', function(req, res) {
+	//TODO(vrabbi) add rate limiting
 	res.sendfile(__dirname + '/img/user.svg');
 })
 .get('/css/style.css', function(req, res) {
+	//TODO(vrabbi) add rate limiting
 	res.sendfile(__dirname + '/static/css/style.css');
 })
 .get('/js/pacman.js', function(req, res) {
+	//TODO(vrabbi) add rate limiting
 	res.sendfile(__dirname + '/static/js/pacman.js');
 });
 
