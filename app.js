@@ -2,7 +2,6 @@
 /**
  *	Node.JS server for Online-PacMan game
  */
-require('newrelic');
 var app = require('express')(),
 	server = require('http').createServer(app),
 	io = require('socket.io').listen(server),
