@@ -31,8 +31,8 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: my-app-manual-v2
-  title: my-app-manual-v2
+  name: my-app
+  title: my-app
   description: app my-app from local-v2
   tags:
     - cluster:local-v2
@@ -49,7 +49,7 @@ metadata:
     terasky.backstage.io/composite-plural: apps
     terasky.backstage.io/composition-name: ""
     terasky.backstage.io/crossplane-resource: "true"
-    terasky.backstage.io/component-type: crossplane-composite
+    terasky.backstage.io/component-type: crossplane-xr
     backstage.io/kubernetes-label-selector: crossplane.io/composite=my-app
     backstage.io/kubernetes-cluster: local-v2
 spec:
@@ -57,3 +57,4 @@ spec:
   lifecycle: production
   owner: kubernetes-auto-ingested
   system: default
+  consumesApis: []
