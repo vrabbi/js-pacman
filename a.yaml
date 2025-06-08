@@ -26,6 +26,7 @@ spec:
   lifecycle: production
   owner: kubernetes-auto-ingested
   system: default
+  consumesApis: []
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
