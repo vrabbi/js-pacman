@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  annotations:
+    terasky.backstage.io/kro-rgd-name: my-application
+    terasky.backstage.io/kro-rgd-id: 5a889edb-d853-4e6f-8fa8-13e8b949fe3b
+    terasky.backstage.io/kro-rgd-crd-name: applications.kro.run
+    terasky.backstage.io/kro-instance-uid: 234a937f-f620-4cfc-8b7c-da6379dd3ae5
+    terasky.backstage.io/kro-sub-resources: "apps/v1:deployment,v1:service,networking.k8s.io/v1:ingress"
+  name: aaaaa
+  title: aaaaa
+  namespace: default
+spec:
+  type: service
+  lifecycle: production
+  owner: default/kubernetes-auto-ingested
+  system: default/default
